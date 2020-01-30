@@ -1,0 +1,26 @@
+<form method="POST" action="https://ebanking.bankofmaldives.com.mv/bmlmpiuat/threed/MPI" name="bankofmaldives" id="bankofmaldives">
+    <input type="hidden" name="Version" value="1.1">
+    <input type="hidden" name="MerID" value="<?php echo $block->getMerID(); ?>">
+    <input type="hidden" name="AcqID" value="<?php echo $block->getAcqID(); ?>">
+    <input type="hidden" name="MerRespURL" value="<?php echo $block->getMerRespURL(); ?>">
+    <input type="hidden" name="PurchaseCurrency" value="<?php echo $block->getPurchaseCurrency(); ?>">
+    <input type="hidden" name="PurchaseCurrencyExponent" value="2">
+    <input type="hidden" name="OrderID" value="<?php echo $block->getOrderIncrementId(); ?>">
+    <input type="hidden" name="SignatureMethod" value="<?php echo $block->getSignatureMethod(); ?>">
+    <input type="hidden" name="PurchaseAmt" value="<?php echo $block->getPurchaseAmt(); ?>">
+    <input type="hidden" name="Signature" value="<?php echo $block->getSignature(); ?>">
+
+    <input type="submit" name="submit" id="submitfrm" value="submit" style="display: none;">
+</form>
+<script>
+    require(['jquery'], function($){ 
+        //your js code here  
+        jQuery(document).ready(function() {   
+
+            console.log('SUBMITING jquery....')
+            jQuery( "#submitfrm" ).trigger( "click" );
+            //jQuery('form#bankofmaldives').submit();
+        });
+    });
+</script>
+<p>Redirecting........</p>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+  <event name="sales_order_payment_place_start">
+    <observer name="Elightwalk_BmlPayment_Sales_Order_Payment_Place_Start" instance="Elightwalk\BmlPayment\Observer\SalesOrderPaymentPlaceStart" />
+  </event>
+</config>
